@@ -11,6 +11,9 @@ The code in this project analyses the records to calculate each of the following
 * The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
 * The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
 
-Live Portfolio Website link:
+Here is a screenshot of the results:
+![Screenshot 2024-02-27 160339](https://github.com/raytrilla/Console-Finances/assets/151631423/ce6a9743-fe5c-4f5f-b27c-c988343e66c7)
+
+Live application link: https://raytrilla.github.io/Console-Finances/
 
 Github repository Link: https://github.com/raytrilla/Console-Finances
