@@ -86,3 +86,53 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+// Variables to store the total number of months, the net total profit/loss
+var totalMonths = finances.length;
+var netTotal = 0;
+var greatestIncrease = {
+  amount: 0,
+  date: ''
+};
+var greatestDecrease = {
+  amount: 0,
+  date: ''
+};
+var totalChange = 0;
+
+
+// Calculate netTotal and track greatestIncrease and greatestDecrease
+for (var i = 0; i < finances.length; i++) {
+  // Calculate netTotal
+  netTotal += finances[i][1];
+
+
+  // Track greatestIncrease and greatestDecrease
+  if (i > 0) {
+    var change = finances[i][1] - finances[i - 1][1];
+    totalChange += change;
+    if (change > greatestIncrease.amount) {
+      greatestIncrease.amount = change;
+      greatestIncrease.date = finances[i][0];
+    }
+    if (change < greatestDecrease.amount) {
+      greatestDecrease.amount = change;
+      greatestDecrease.date = finances[i][0];
+    }
+  }
+}
+
+
+// This calculates the average change in profit/loss by dividing the total change by the total number of months minus one
+var averageChange = totalChange / (totalMonths - 1);
+
+
+// To print to the console
+console.log("Financial Analysis");
+console.log("------------------");
+console.log("Total Months:", totalMonths);
+console.log("Total: $", netTotal);
+console.log("Average Change: $", averageChange.toFixed(2));
+console.log("Greatest Increase in Profits/Losses:", greatestIncrease.date, "($" + greatestIncrease.amount + ")");
+console.log("Greatest Decrease in Profits/Losses:", greatestDecrease.date, "($" + greatestDecrease.amount + ")");
