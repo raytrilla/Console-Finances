@@ -129,10 +129,11 @@ var averageChange = totalChange / (totalMonths - 1);
 
 
 // To print to the console
-console.log("Financial Analysis");
-console.log("------------------");
-console.log("Total Months:", totalMonths);
-console.log("Total: $", netTotal);
-console.log("Average Change: $", averageChange.toFixed(2));
-console.log("Greatest Increase in Profits/Losses:", greatestIncrease.date, "($" + greatestIncrease.amount + ")");
-console.log("Greatest Decrease in Profits/Losses:", greatestDecrease.date, "($" + greatestDecrease.amount + ")");
+console.log("Financial Analysis\n" +
+  "------------------\n" +
+  "Total Months: " + totalMonths + "\n" +
+  "Total: $" + netTotal + "\n" +
+  "Average Change: $" + averageChange.toFixed(2) + "\n" +
+  "Greatest Increase in Profits/Losses: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")\n" +
+  "Greatest Decrease in Profits/Losses: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")"
+);
